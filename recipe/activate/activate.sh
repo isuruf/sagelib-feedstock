@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 eval `python ../sage-conda-env.py activate`
 
