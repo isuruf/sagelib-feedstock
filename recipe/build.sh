@@ -22,6 +22,6 @@ rm "$PREFIX/share/jupyter/nbextensions/jsmol"
 rm "$PREFIX/lib64"
 
 cp "$RECIPE_DIR/activate/sage-conda-env.py" "$PREFIX/etc/conda/"
-cp "$RECIPE_DIR/activate/activate.sh" "$PREFIX/etc/conda/activate.d"
-cp "$RECIPE_DIR/activate/deactivate.sh" "$PREFIX/etc/conda/deactivate.d"
+cp "$RECIPE_DIR/activate/activate.sh" "$PREFIX/etc/conda/activate.d/sage-activate.sh"
+cp "$RECIPE_DIR/activate/deactivate.sh" "$PREFIX/etc/conda/deactivate.d/sage-deactivate.sh"
 
