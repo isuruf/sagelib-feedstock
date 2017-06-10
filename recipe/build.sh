@@ -34,8 +34,10 @@ if [[ `uname` == 'Darwin' ]]; then
     export PATH="$RECIPE_DIR:$PATH"
 fi
 export CCACHE_BASEDIR="${SRC_DIR}"
+ccache -z
 
 python -u setup.py build
+ccache -s
 exit 1
 python -u setup.py install > /dev/null 2>&1
 
