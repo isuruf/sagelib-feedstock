@@ -33,6 +33,7 @@ mkdir -p "$SAGE_DOC"
 if [[ `uname` == 'Darwin' ]]; then
     export PATH="$RECIPE_DIR:$PATH"
 fi
+export CCACHE_BASEDIR="${SRC_DIR}"
 
 python -u setup.py build
 exit 1
