@@ -38,7 +38,6 @@ ccache -z
 
 python -u setup.py build
 ccache -s
-exit 1
 python -u setup.py install > /dev/null 2>&1
 
 # TODO: Add these in corresponding packages
