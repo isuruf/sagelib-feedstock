@@ -32,11 +32,12 @@ mkdir -p "$SAGE_DOC"
 
 if [[ `uname` == 'Darwin' ]]; then
     export PATH="$RECIPE_DIR:$PATH"
+    function timeout() { perl -e 'alarm shift; exec @ARGV' "$@"; }
 fi
 export CCACHE_BASEDIR="${SRC_DIR}"
 ccache -z
 
-python -u setup.py build
+timeout 600 python -u setup.py build
 ccache -s
 exit 1
 python -u setup.py install > /dev/null 2>&1
