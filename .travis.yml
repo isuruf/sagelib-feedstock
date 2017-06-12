@@ -6,6 +6,12 @@ language: generic
 os: osx
 osx_image: xcode6.4
 
+cache:
+  branch: no-md5deep
+  directories:
+  - $HOME/.ccache
+  - $HOME/.cycache
+
 env:
   matrix:
     
@@ -54,6 +60,6 @@ install:
       source run_conda_forge_build_setup
 
 script:
-  - conda build ./recipe
+  - conda build --no-build-id ./recipe
 
   - upload_or_check_non_existence ./recipe conda-forge --channel=main
