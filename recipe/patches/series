@@ -6,3 +6,4 @@ disable-sage-location.patch
 sage-env.patch
 26932.diff
 fix_cache_file_length.patch
+singular_4_1_2.diff
